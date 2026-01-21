@@ -1,0 +1,6 @@
+@DreamsAPI_HostAddress = http://localhost:5007
+
+GET {{DreamsAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
