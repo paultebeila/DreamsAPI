@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DreamsAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9be963b30601c9dbc577a444404140855798787e")]
 [assembly: System.Reflection.AssemblyProductAttribute("DreamsAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DreamsAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
