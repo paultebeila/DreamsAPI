@@ -16,7 +16,7 @@ namespace DreamsAPI.Controllers
             _service = service;
         }
 
-        [HttpGet]
+        [HttpGet("all")]
         public async Task<IActionResult> GetAll([FromQuery] string? roomType, [FromQuery] BookingStatus? status)
         {
             var bookings = await _service.GetAllAsync(roomType, status);
@@ -34,7 +34,7 @@ namespace DreamsAPI.Controllers
             return Ok(booking);
         }
 
-        [HttpPost]
+        [HttpPost("book")]
         public async Task<IActionResult> Create(CreateBookingDto dto)
         {
             var booking = new Booking
@@ -60,7 +60,7 @@ namespace DreamsAPI.Controllers
             return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("update/{id}")]
         public async Task<IActionResult> Update(int id, UpdateBookingDto dto)
         {
             var booking = await _service.GetByIdAsync(id);
@@ -88,7 +88,7 @@ namespace DreamsAPI.Controllers
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("delete/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             await _service.DeleteAsync(id);
